@@ -1,0 +1,161 @@
+.m-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  pointer-events: none;
+  padding: 0;
+  margin: 0;
+  z-index: 100;
+}
+
+.m-menu__backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  -webkit-transition: 0.5s ease-out;
+  -o-transition: 0.5s ease-out;
+  transition: 0.5s ease-out;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.m-menu__burger {
+  position: absolute;
+  top: 1.1rem;
+  left: 1.1rem;
+  width: 4rem;
+  height: 4rem;
+  padding: 0.4rem 0.6rem;
+  z-index: 2;
+}
+
+.m-menu__burger span,
+.m-menu__burger span::before,
+.m-menu__burger span::after {
+  content: "";
+  display: block;
+  width: 3.2rem;
+  height: 0.4rem;
+  position: absolute;
+  margin-top: 1.2rem;
+  background: black;
+  border-radius: 0.3rem;
+}
+
+.m-menu__burger span::before {
+  margin-top: -0.8rem;
+}
+
+.m-menu__burger span::after {
+  margin-top: 0.8rem;
+}
+
+.m-menu__toggle {
+  position: absolute;
+  top: 1.1rem;
+  left: 1.1rem;
+  width: 4rem;
+  height: 4rem;
+  cursor: pointer;
+  pointer-events: all;
+  opacity: 0;
+  outline: 1px solid black;
+  z-index: 3;
+}
+
+.m-menu__toggle:checked {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+.m-menu__toggle:checked ~ .m-menu__content {
+  -webkit-transform: none;
+       -o-transform: none;
+          transform: none;
+}
+
+.m-menu__toggle:checked ~ .m-menu__backdrop {
+  opacity: 1;
+}
+
+.m-menu__content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 30rem;
+  height: 100vh;
+  overflow: auto;
+  margin: 0;
+  padding: 0;
+  background: #e6e6e6;
+  -webkit-transform-origin: 0 0;
+       -o-transform-origin: 0 0;
+          transform-origin: 0 0;
+  -webkit-transform: translateX(-31rem);
+       -o-transform: translateX(-31rem);
+          transform: translateX(-31rem);
+  -webkit-transition: -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+  transition: -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+  -o-transition: -o-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), -o-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+  pointer-events: all;
+  -webkit-box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.75);
+          box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.75);
+  z-index: 4;
+}
+
+.m-menu__content nav {
+  margin: 2rem;
+}
+
+.m-menu__content nav > h2 {
+  font-size: 3rem;
+  color: #666666;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0.4rem 0;
+}
+
+.m-menu__content nav > ul {
+  list-style: none;
+}
+
+.m-menu__content nav > ul > li {
+  margin: 1rem 0;
+}
+
+.m-menu__content nav > ul > li > a {
+  -webkit-transition: 0.3s ease-in;
+  -o-transition: 0.3s ease-in;
+  transition: 0.3s ease-in;
+  text-decoration: none;
+  font-size: 2rem;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #5a2600;
+  padding: 0.6rem 0;
+  line-height: 2rem;
+  cursor: pointer;
+}
+
+.m-menu__content nav > ul > li > a:hover {
+  background: #a0a0a0;
+  color: #666666;
+  padding: 0.6rem 1rem;
+  border-radius: 3px;
+}
+
+main {
+  margin: 5rem 5rem;
+}
+/*# sourceMappingURL=style.css.map */
